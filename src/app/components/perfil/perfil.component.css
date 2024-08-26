@@ -23,19 +23,16 @@
 }
 
 :root {
-    /*------Color variables------*/
     --gray_500: #a3a3a3;
     --gray_700: #646464;
     --gray_900: #161616;
     --gray_900_01: #282828;
     --white_a700: #fdfdfc;
 
-    /*------Border radius variables------*/
     --radius-xs: 4px;
     --radius-sm: 20px;
     --radius-md: 46px;
 
-    /*------Spacing variables------*/
     --space-xs: 2px;
     --space-sm: 4px;
     --space-md: 10px;
@@ -152,9 +149,6 @@ select:focus-visible {
     font-family: Inter;
 }
 
-/*-------------------------------------
-    2. Heading CSS
-  --------------------------------------*/
 .ui.heading.size-headingxs {
     font-size: 22px;
     font-weight: 600;
@@ -243,9 +237,6 @@ select:focus-visible {
     border-radius: var(--radius-xs);
 }
 
-/*-------------------------------------
-    2. Page CSS
-  --------------------------------------*/
 .perfil {
     gap: 132px;
     background-color: var(--gray_900);
