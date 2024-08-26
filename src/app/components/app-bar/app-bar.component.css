@@ -1,90 +1,91 @@
 @font-face {
-    font-display: swap;
-    font-style: normal;
-    src: url("../public/fonts/InterRegular.ttf");
-    font-family: "Inter";
-    font-weight: 400;
-  }
-  
-  @font-face {
-    font-display: swap;
-    font-style: normal;
-    src: url("../public/fonts/InterSemiBold.ttf");
-    font-family: "Inter";
-    font-weight: 600;
-  }
-  
-  @font-face {
-    font-display: swap;
-    font-style: normal;
-    src: url("../public/fonts/InterLight.ttf");
-    font-family: "Inter";
-    font-weight: 300;
-  }
-  
-  @font-face {
-    font-display: swap;
-    font-style: normal;
-    src: url("../public/fonts/InterMedium.ttf");
-    font-family: "Inter";
-    font-weight: 500;
-  }
-  
-  
-  :root {
-    --gray_500: #a3a3a3;
-    --gray_500_01: #a6a6a6;
-    --gray_600_00: #6c6c6c00;
-    --gray_800: #404040;
-    --gray_900: #161616;
-    --gray_900_01: #231f20;
-    --gray_900_02: #1c1c1c;
-    --gray_900_03: #282828;
-    --white_a700: #fdfdfc;
-  
-    --radius-xs: 4px;
-    --radius-sm: 5px;
-    --radius-md: 6px;
-    --radius-lg: 8px;
-  
-    --space-xs: 10px;
-  }
-  
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: Inter;
-  }
-  ul {
-    margin: 0;
-    margin-inline: unset !important;
-    padding: 0;
-    list-style: none;
-  }
+  font-display: swap;
+  font-style: normal;
+  src: url("../../assets/fonts/InterRegular.ttf");
+  font-family: "Inter";
+  font-weight: 400;
+}
+
+@font-face {
+  font-display: swap;
+  font-style: normal;
+  src: url("../../assets/fonts/InterSemiBold.ttf");
+  font-family: "Inter";
+  font-weight: 600;
+}
+
+@font-face {
+  font-display: swap;
+  font-style: normal;
+  src: url("../../assets/fonts/InterLight.ttf");
+  font-family: "Inter";
+  font-weight: 300;
+}
+
+@font-face {
+  font-display: swap;
+  font-style: normal;
+  src: url("../../assets/fonts/InterMedium.ttf");
+  font-family: "Inter";
+  font-weight: 500;
+}
+
+
+:root {
+  --gray_500: #a3a3a3;
+  --gray_500_01: #a6a6a6;
+  --gray_600_00: #6c6c6c00;
+  --gray_800: #404040;
+  --gray_900: #161616;
+  --gray_900_01: #231f20;
+  --gray_900_02: #1c1c1c;
+  --gray_900_03: #282828;
+  --white_a700: #fdfdfc;
+
+  --radius-xs: 4px;
+  --radius-sm: 5px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+
+  --space-xs: 10px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Inter;
+}
+
+ul {
+  margin: 0;
+  margin-inline: unset !important;
+  padding: 0;
+  list-style: none;
+}
 
 
 .group-14 {
-    margin-top: 28px;
-    padding-left: 150px;
-    padding-right: 150px;
-    display: flex;
-    flex: 1;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
+  margin-top: 28px;
+  padding-left: 150px;
+  padding-right: 150px;
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
 
-    @media only screen and (max-width: 1050px) {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
+  @media only screen and (max-width: 1050px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .group-80 {
-    gap: 18px;
-    display: flex;
-    flex-wrap: wrap;
+  gap: 18px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .home {
-    color: var(--white_a700) !important;
+  color: var(--white_a700) !important;
 }

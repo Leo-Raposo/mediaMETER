@@ -1,7 +1,7 @@
 @font-face {
     font-display: swap;
     font-style: normal;
-    src: url("../../public/fonts/InterRegular.ttf");
+    src: url("../../assets/fonts/InterRegular.ttf");
     font-family: "Inter";
     font-weight: 400;
 }
@@ -9,7 +9,7 @@
 @font-face {
     font-display: swap;
     font-style: normal;
-    src: url("../../public/fonts/InterSemiBold.ttf");
+    src: url("../../assets/fonts/InterSemiBold.ttf");
     font-family: "Inter";
     font-weight: 600;
 }
@@ -17,7 +17,7 @@
 @font-face {
     font-display: swap;
     font-style: normal;
-    src: url("../../public/fonts/InterLight.ttf");
+    src: url("../../assets/fonts/InterLight.ttf");
     font-family: "Inter";
     font-weight: 300;
 }
@@ -25,7 +25,7 @@
 @font-face {
     font-display: swap;
     font-style: normal;
-    src: url("../../public/fonts/InterMedium.ttf");
+    src: url("../../assets/fonts/InterMedium.ttf");
     font-family: "Inter";
     font-weight: 500;
 }
@@ -206,7 +206,7 @@ select:focus-visible {
     border-radius: var(--radius-xs);
 }
 
-.christopher-nolan {
+.equipe-name .equipe-position {
     color: var(--gray_500_01) !important;
 }
 
@@ -260,7 +260,7 @@ select:focus-visible {
 
 .group-24 {
     height: 414px;
-    background-image: url(../../public/images/img_group_24.png);
+    background-image: url(../../assets/images/img_group_24.png);
     background-size: cover;
     background-repeat: no-repeat;
     align-self: stretch;
@@ -629,7 +629,6 @@ select:focus-visible {
     display: flex;
     align-items: center;
     gap: 12px;
-    /* Espaçamento entre o ícone e o texto */
 }
 
 .item img {
