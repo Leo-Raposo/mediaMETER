@@ -9,7 +9,7 @@ import { AvaliacaoComponent } from "./components/avaliacao/avaliacao.component";
   standalone: true,
   imports: [RouterOutlet, HomeComponent, AppBarComponent, AvaliacaoComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'MediaMeter';

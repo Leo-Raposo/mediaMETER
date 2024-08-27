@@ -1,15 +1,13 @@
-import { provideRouter, Route } from '@angular/router';
+import { Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { CadastroComponent } from './components/cadastro/cadastro.component';
-import { AvaliacaoComponent } from './components/avaliacao/avaliacao.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
+import { AvaliacaoComponent } from './components/avaliacao/avaliacao.component';
 
-const routes: Route[] = [
+export const routes: Routes = [
+    { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', component: HomeComponent },
     { path: 'cadastro', component: CadastroComponent },
-    { path: 'avaliacao', component: AvaliacaoComponent },
     { path: 'perfil', component: PerfilComponent },
-    { path: '', redirectTo: '/home', pathMatch: 'full' },
+    { path: 'avaliacao', component: AvaliacaoComponent }
 ];
-
-export const appRoutes = provideRouter(routes);
