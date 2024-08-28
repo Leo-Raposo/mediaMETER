@@ -23,12 +23,6 @@
   padding: 38px 18px 12px;
 }
 
-@media (max-width: 991px) {
-  .registration-form {
-    margin-top: 40px;
-  }
-}
-
 .form-title {
   color: #fdfdfc;
   align-self: center;
@@ -41,12 +35,6 @@
   width: 100%;
   gap: 31px;
   flex-wrap: wrap;
-}
-
-@media (max-width: 991px) {
-  .form-row {
-    max-width: 100%;
-  }
 }
 
 .form-group {
@@ -85,6 +73,11 @@ textarea {
   pointer-events: none;
 }
 
+.images-row {
+  display: flex;
+  justify-content: space-between;
+}
+
 .image-upload {
   display: flex;
   flex-direction: column;
@@ -110,15 +103,13 @@ textarea {
   border: 1px solid #282828;
 }
 
-@media (max-width: 991px) {
-  .cover-upload {
-    padding: 25px 20px;
-  }
-}
-
 .upload-size {
   color: #a3a3a3;
   margin-top: 10px;
+}
+
+.description-group {
+  width: 100%;
 }
 
 .team-section {
@@ -130,12 +121,6 @@ textarea {
   width: 100%;
   flex-direction: column;
   padding: 9px 14px 58px;
-}
-
-@media (max-width: 991px) {
-  .team-section {
-    max-width: 100%;
-  }
 }
 
 .section-title {
@@ -177,46 +162,4 @@ textarea {
   padding: 18px 20px;
   font: 500 21px Inter, sans-serif;
   cursor: pointer;
-}
-
-.page-footer {
-  margin-top: 46px;
-}
-
-@media (max-width: 991px) {
-  .page-footer {
-    margin-top: 40px;
-  }
-}
-
-.footer-divider {
-  background: #282828;
-  height: 1px;
-  border: none;
-  margin: 0;
-}
-
-.current-time {
-  color: #a3a3a3;
-  display: block;
-  margin: 19px 0 21px 230px;
-  font: 400 15px Inter, sans-serif;
-}
-
-@media (max-width: 991px) {
-  .current-time {
-    margin-left: 10px;
-  }
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
 }
