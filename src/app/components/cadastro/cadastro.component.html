@@ -1,127 +1,129 @@
-<body>
-    <div class="cadastro">
-        <div class="column">
-            <div class="columnheaderlog">
-                <header class="header">
-                    <img src="../../assets/images/img_header_logo.png" alt="Headerlogo" class="headerlogo_one" />
-                    <ul class="rowhome">
-                        <li>
-                            <a href="#">
-                                <p class="home ui text size-textxl">Home</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <p class="ui text size-textxl">Midias</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <p class="ui text size-textxl">Perfil</p>
-                            </a>
-                        </li>
-                    </ul>
-                </header>
-                <div class="columncadastrar">
-                    <h1 class="cadastrarmdia ui heading size-text2xl">Cadastrar Mídia</h1>
-                    <div class="rowarrowdownsvg">
-                        <div class="rowarrowdownsvg-1">
-                            <div class="columnarrowdown-1">
-                                <select name="arrowdownsvgrep" class="arrowdownsvgrep-4">
-                                    <option value="" disabled selected>tipo de mídia</option>
-                                    <option value="option1">Filme</option>
-                                    <option value="option2">Jogo</option>
-                                    <option value="option3">Albúm</option>
-                                </select>
-                                <label class="name_one">
-                                    <input name="name_one" placeholder="nome" type="text" />
-                                </label>
-                                <label class="name_one">
-                                    <input name="year_one" placeholder="ano de lançamento" type="text" />
-                                </label>
-                                <h2 class="foto ui heading size-textmd">foto</h2>
-                                <div class="rowbanner">
-                                    <div class="banner">
-                                        <p class="banner-1 ui text size-texts">banner</p>
-                                        <div class="uploadbanner">
-                                            <img src="../../assets/images/img_upload_svgrepo_com.svg"
-                                                alt="Uploadsvgrepo" class="uploadsvgrepo" />
-                                            <p class="class-1080x1920 ui text size-textxs">1080 x 1920</p>
-                                        </div>
-                                    </div>
-                                    <div class="capa">
-                                        <p class="capa-1 ui text size-texts">capa</p>
-                                        <div class="bannerhd">
-                                            <img src="../../assets/images/img_upload_svgrepo_com.svg"
-                                                alt="Uploadsvgrepo" class="uploadsvgrepo" />
-                                            <p class="class-1080x1920 ui text size-textxs">1920 x 1080</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="columnarrowdown">
-                            <select name="arrowdownsvgrep" class="arrowdownsvgrep">
-                                <option value="" disabled selected>idioma</option>
-                                <option value="option1">Português</option>
-                                <option value="option2">Inglês</option>
-                                <option value="option3">Espanhol</option>
-                            </select>
-                            <select name="arrowdownsvgrep" class="arrowdownsvgrep">
-                                <option value="" disabled selected>país</option>
-                                <option value="option1">Brasil</option>
-                                <option value="option2">Estados Unidos</option>
-                                <option value="option3">Espanha</option>
-                            </select>
-                            <select name="arrowdownsvgrep" class="arrowdownsvgrep">
-                                <option value="" disabled selected>gênero</option>
-                                <option value="option1">Ação</option>
-                                <option value="option2">Comédia</option>
-                                <option value="option3">Drama</option>
-                            </select>
-                            <select name="arrowdownsvgrep" class="arrowdownsvgrep">
-                                <option value="" disabled selected>plataforma</option>
-                                <option value="option1">Netflix</option>
-                                <option value="option2">Amazon Prime</option>
-                                <option value="option3">Disney+</option>
-                            </select>
-                            <textarea name="descrição" placeholder="descrição" class="descrio"></textarea>
-                        </div>
+<main class="media-registration">
+    <section class="registration-form">
+        <h1 class="form-title">Cadastrar Mídia</h1>
+        <form>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="mediaType">tipo de mídia</label>
+                    <div class="select-wrapper">
+                        <select id="mediaType" name="mediaType">
+                            <option value="" disabled selected>tipo de mídia</option>
+                            <option value="option1">Filme</option>
+                            <option value="option2">Jogo</option>
+                            <option value="option3">Albúm</option>
+                        </select>
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/1548455004af3eecb7d20571df781abd7c9cd1cae1a758cecd6c6de4bda9b246?placeholderIfAbsent=true&apiKey=41a7402f6dab483c82b6fcabc71f9215"
+                            alt="" class="select-arrow" />
                     </div>
-                    <div class="team">
-                        <div class="columnequipe">
-                            <p class="equipe ui text size-texts">equipe</p>
-                            <div class="rowabaixoadicio">
-                                <div class="columnabaixoadi">
-                                    <p class="abaixoadicione ui text size-texts">abaixo adicione os membros da equipe
-                                    </p>
-                                    <label class="teamname_one">
-                                        <input name="teamname_one" placeholder="nome equipe" type="text" />
-                                    </label>
-                                    <label class="teamnamelist">
-                                        <input name="teamnamelist" placeholder="Peter Jackson" type="text" />
-                                    </label>
-                                </div>
-                                <div class="columnteamposit">
-                                    <label class="teamposition">
-                                        <input name="teamposition" placeholder="cargo equipe" type="text" />
-                                    </label>
-                                    <label class="teamposition-1">
-                                        <input name="teamposition" placeholder="Diretor" type="text" />
-                                    </label>
-                                </div>
-                                <img src="../../assets/images/img_grid.svg" alt="Grid" class="grid_one" />
-                            </div>
-                        </div>
+                </div>
+                <div class="form-group">
+                    <label for="language">idioma</label>
+                    <div class="select-wrapper">
+                        <select id="language" name="language">
+                            <option value="" disabled selected>idioma</option>
+                            <option value="option1">Português</option>
+                            <option value="option2">Inglês</option>
+                            <option value="option3">Espanhol</option>
+                        </select>
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/149c4b1ae9afe64c4dc9ae3e23b8286c2323beca26668f065edab7bcb0554598?placeholderIfAbsent=true&apiKey=41a7402f6dab483c82b6fcabc71f9215"
+                            alt="" class="select-arrow" />
                     </div>
-                    <button class="flex-row-center-center criar">Criar</button>
                 </div>
             </div>
-            <div class="columnhr_one">
-                <div class="hr_one"></div>
-                <p class="time ui text size-textlg">Brasília, DF • 23 Ago, 20:30</p>
-                <div class="hr_three"></div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">nome</label>
+                    <input type="text" id="name" name="name" />
+                </div>
+                <div class="form-group">
+                    <label for="genre">gênero</label>
+                    <div class="select-wrapper">
+                        <select id="genre" name="genre">
+                            <option value="" disabled selected>gênero</option>
+                            <option value="option1">Ação</option>
+                            <option value="option2">Comédia</option>
+                            <option value="option3">Drama</option>
+                        </select>
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9b2b75f33310783d4a428745f60dcb46bd70cc71e2801821331a704587696e9f?placeholderIfAbsent=true&apiKey=41a7402f6dab483c82b6fcabc71f9215"
+                            alt="" class="select-arrow" />
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</body>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="releaseYear">ano de lançamento</label>
+                    <input type="text" id="releaseYear" name="releaseYear" />
+                </div>
+                <div class="form-group">
+                    <label for="platform">plataforma</label>
+                    <div class="select-wrapper">
+                        <select id="platform" name="platform">
+                            <option value="" disabled selected>plataforma</option>
+                            <option value="option1">Netflix</option>
+                            <option value="option2">Amazon Prime</option>
+                            <option value="option3">Disney+</option>
+                        </select>
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0070763ddd1285a3712d48995680da2293bf77f6cb91fade0b36a9612760f21f?placeholderIfAbsent=true&apiKey=41a7402f6dab483c82b6fcabc71f9215"
+                            alt="" class="select-arrow" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <fieldset>
+                        <legend>Imagens</legend>
+                        <div class="image-upload">
+                            <label for="photo">foto</label>
+                            <label for="banner">banner</label>
+                            <input type="file" id="photo" name="photo" accept="image/*" />
+                            <input type="file" id="banner" name="banner" accept="image/*" />
+                        </div>
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b2ed24df-627f-419f-a155-a4d031f85ca6?placeholderIfAbsent=true&apiKey=41a7402f6dab483c82b6fcabc71f9215"
+                            alt="Upload placeholder" class="upload-placeholder" />
+                    </fieldset>
+                </div>
+                <div class="form-group">
+                    <label for="cover">capa</label>
+                    <div class="cover-upload">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/ee2e60e8f4c8dda85e16ae0623b3f2166bd64002463e61b686f611e06d7d2407?placeholderIfAbsent=true&apiKey=41a7402f6dab483c82b6fcabc71f9215"
+                            alt="Upload cover" class="upload-icon" />
+                        <span class="upload-size">1920 x 1080</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="description">descrição</label>
+                <textarea id="description" name="description" rows="4"></textarea>
+            </div>
+        </form>
+    </section>
+
+    <section class="team-section">
+        <h2 class="section-title">equipe</h2>
+        <p class="section-description">abaixo adicione os membros da equipe</p>
+        <form class="team-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="teamMemberName">nome equipe</label>
+                    <input type="text" id="teamMemberName" name="teamMemberName" />
+                </div>
+                <div class="form-group">
+                    <label for="teamMemberRole">cargo equipe</label>
+                    <div class="select-wrapper">
+                        <input type="text" id="teamMemberRole" name="teamMemberRole">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/aa0ae03147a78deb522b979e809c74d0576a509eff179b2576e618710b3ef9d5?placeholderIfAbsent=true&apiKey=41a7402f6dab483c82b6fcabc71f9215"
+                            alt="" class="select-arrow" />
+                    </div>
+                </div>
+            </div>
+        </form>
+        <ul class="team-list">
+            <li class="team-member">
+                <span class="member-name">Peter Jackson</span>
+                <span class="member-role">Diretor</span>
+            </li>
+        </ul>
+    </section>
+
+    <button type="submit" class="submit-button">Criar</button>
+</main>

@@ -5,9 +5,9 @@ import { PerfilComponent } from './components/perfil/perfil.component';
 import { AvaliacaoComponent } from './components/avaliacao/avaliacao.component';
 
 export const routes: Routes = [
-    { path: '', redirectTo: 'home', pathMatch: 'full' },
+    { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: 'home', component: HomeComponent },
+    { path: 'midias', component: AvaliacaoComponent },
     { path: 'cadastro', component: CadastroComponent },
     { path: 'perfil', component: PerfilComponent },
-    { path: 'avaliacao', component: AvaliacaoComponent }
 ];

@@ -1,108 +1,13 @@
-<div class="perfil">
-    <header class="header">
-        <img src="../../assets/images/img_header_logo.png" alt="Headerlogo" class="headerlogo_one" />
-        <ul class="rowhome">
-            <li>
-                <a href="#">
-                    <p class="home ui text size-textmd">Home</p>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <p class="ui text size-textmd">Midias</p>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <p class="ui text size-textmd">Perfil</p>
-                </a>
-            </li>
-        </ul>
-    </header>
-    <div class="column">
-        <div class="columnmidias">
-            <h1 class="ui heading size-headingxs">Mídias</h1>
-            <div class="perfil-1">
-                <div class="midias">
-                    <p class="midasfilmes ui text size-textxs">LISTA DE FILMES</p>
-                    <div class="rowlineone_one">
-                        <div class="columnlineone">
-                            <div class="lineone_one"></div>
-                            <div class="rowlista_de">
-                                <img src="../../assets/images/img_midia1_1.png" alt="Lista De Filmes"
-                                    class="lista_de_filmes" />
-                                <img src="../../assets/images/img_midia1_2.png" alt="Lista De Filmes"
-                                    class="lista_de_filmes" />
-                                <img src="../../assets/images/img_midia1_3.png" alt="Midia1three"
-                                    class="lista_de_filmes" />
-                                <img src="../../assets/images/img_midia1_4.png" alt="Midia1four"
-                                    class="lista_de_filmes" />
-                                <img src="../../assets/images/img_midia1_5.png" alt="Midia1five"
-                                    class="lista_de_filmes" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pagination1">
-                        <img src="../../assets/images/img_arrow_left1.svg" alt="Image" class="image" />
-                        <p class="numbersone ui text size-textxs">2/5</p>
-                        <img src="../../assets/images/img_user.svg" alt="Image" class="image" />
-                    </div>
-                </div>
-                <div class="midias-1">
-                    <p class="midasfilmes ui text size-textxs">LISTA DE FILMES</p>
-                    <div class="rowlineone_one">
-                        <div class="columnlineone">
-                            <div class="lineone_one"></div>
-                            <div class="rowlista_de">
-                                <img src="../../assets/images/img_midia1_1.png" alt="Lista De Filmes"
-                                    class="lista_de_filmes" />
-                                <img src="../../assets/images/img_midia1_2.png" alt="Lista De Filmes"
-                                    class="lista_de_filmes" />
-                                <img src="../../assets/images/img_midia1_3.png" alt="Midia1three"
-                                    class="lista_de_filmes" />
-                                <img src="../../assets/images/img_midia1_4.png" alt="Midia1four"
-                                    class="lista_de_filmes" />
-                                <img src="../../assets/images/img_midia1_5.png" alt="Midia1five"
-                                    class="lista_de_filmes" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pagination1">
-                        <img src="../../assets/images/img_arrow_left1.svg" alt="Image" class="image" />
-                        <p class="numbersone ui text size-textxs">2/5</p>
-                        <img src="../../assets/images/img_user.svg" alt="Image" class="image" />
-                    </div>
-                </div>
-                <div class="midias-1">
-                    <p class="midasfilmes ui text size-textxs">LISTA DE FILMES</p>
-                    <div class="rowlineone_one">
-                        <div class="columnlineone">
-                            <div class="lineone_one"></div>
-                            <div class="rowlista_de">
-                                <img src="../../assets/images/img_midia1_1.png" alt="Lista De Filmes"
-                                    class="lista_de_filmes" />
-                                <img src="../../assets/images/img_midia1_2.png" alt="Lista De Filmes"
-                                    class="lista_de_filmes" />
-                                <img src="../../assets/images/img_midia1_3.png" alt="Midia1three"
-                                    class="lista_de_filmes" />
-                                <img src="../../assets/images/img_midia1_4.png" alt="Midia1four"
-                                    class="lista_de_filmes" />
-                                <img src="../../assets/images/img_midia1_5.png" alt="Midia1five"
-                                    class="lista_de_filmes" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pagination1">
-                        <img src="../../assets/images/img_arrow_left1.svg" alt="Image" class="image" />
-                        <p class="numbersone ui text size-textxs">2/5</p>
-                        <img src="../../assets/images/img_user.svg" alt="Image" class="image" />
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer">
-            <div class="hr_one"></div>
-            <p class="time ui text size-texts">Brasília, DF • 23 Ago, 20:30</p>
-        </div>
+<main class="home">
+    <div class="content-wrapper">
+        <h2 class="section-title">Mídias</h2>
+
+        <app-media-list [title]="'Lista de Filmes'" [items]="movies"></app-media-list>
+        <app-media-list [title]="'Lista de Games'" [items]="games"></app-media-list>
+        <app-media-list [title]="'Lista de Albuns'" [items]="albums"></app-media-list>
+
     </div>
-</div>
+    <footer class="footer">
+        <hr class="footer-divider">
+    </footer>
+</main>

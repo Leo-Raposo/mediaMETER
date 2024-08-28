@@ -1,0 +1,14 @@
+<div class="media-section">
+    <h3 class="media-title">{{title}}</h3>
+    <hr class="divider">
+    <div class="media-list">
+        <ng-container *ngFor="let media of paginatedItems">
+            <img [src]="media.src" [alt]="media.alt" class="media-item">
+        </ng-container>
+    </div>
+    <div class="pagination">
+        <button (click)="previousPage()" [disabled]="currentPage === 1">Previous</button>
+        <span class="pagination-text">{{currentPage}}/{{totalPages}}</span>
+        <button (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
+    </div>
+</div>
