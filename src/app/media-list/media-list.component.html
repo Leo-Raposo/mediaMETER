@@ -7,8 +7,14 @@
         </ng-container>
     </div>
     <div class="pagination">
-        <button (click)="previousPage()" [disabled]="currentPage === 1">Previous</button>
+        <button (click)="previousPage()" [disabled]="currentPage === 1">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/517e293790d8f562b4fc28214afb006f4094a035475e6d8193c7c7585ad4f82e?placeholderIfAbsent=true&apiKey=41a7402f6dab483c82b6fcabc71f9215"
+                alt="Previous" class="pagination-arrow" />
+        </button>
         <span class="pagination-text">{{currentPage}}/{{totalPages}}</span>
-        <button (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
+        <button (click)="nextPage()" [disabled]="currentPage === totalPages">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/fd467a8dab027e10758cb4d19eeb8232c8db3bdbf79c4731fce6decd849d5218?placeholderIfAbsent=true&apiKey=41a7402f6dab483c82b6fcabc71f9215"
+                alt="Next" class="pagination-arrow" />
+        </button>
     </div>
 </div>

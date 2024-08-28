@@ -49,13 +49,24 @@
 button {
     background-color: transparent;
     border: none;
-    color: white;
     cursor: pointer;
-    padding: 5px 10px;
-    font-size: 16px;
+    padding: 5px;
 }
 
-button:disabled {
-    color: grey;
+button img {
+    width: 12px;
+    /* Tamanho do SVG */
+    height: auto;
+}
+
+button:disabled img {
+    opacity: 0.5;
     cursor: not-allowed;
+}
+
+.pagination-text {
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    flex-grow: 1;
 }
