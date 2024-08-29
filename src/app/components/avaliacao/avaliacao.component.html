@@ -1,44 +1,24 @@
-<article class="movie-review">
+<article *ngIf="media" class="movie-review">
     <header class="movie-header">
-        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/76324e9d3d450a6c04c282740c3d8d3b3701f7f5ec89adc97bf58980f2edcd88?placeholderIfAbsent=true&apiKey=41a7402f6dab483c82b6fcabc71f9215"
-            alt="Interstellar movie poster" class="movie-poster" />
+        <img [src]="media.photo" [alt]="media.name" class="movie-poster" />
         <div class="movie-info">
-            <h1 class="movie-title">Interestellar</h1>
-            <p class="movie-year">2014</p>
+            <h1 class="movie-title">{{ media.name }}</h1>
+            <p class="movie-year">{{ media.releasedDate | date: 'yyyy' }}</p>
             <p class="movie-director">
                 <span class="label">dirigido por</span>
-                <span class="director-name">Christopher Nolan</span>
+                <span class="director-name">{{ media.team.name }}</span>
             </p>
         </div>
     </header>
 
     <div class="content-wrapper">
         <aside class="sidebar">
-            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f7ccc8fec3133d614324104292d46e36dbe5eb6b58c2caadb2f22b13a58363db?placeholderIfAbsent=true&apiKey=41a7402f6dab483c82b6fcabc71f9215"
-                alt="Interstellar movie thumbnail" class="movie-thumbnail" />
+            <img [src]="media.photo" [alt]="media.name" class="movie-thumbnail" />
             <section class="streaming-section">
                 <h2 class="streaming-title">onde assistir</h2>
                 <ul class="streaming-list">
                     <li class="streaming-item">
-                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/77a3804a859558c2ab98f224f23fef187d2580731e8879e99aca1bbd87102cff?placeholderIfAbsent=true&apiKey=41a7402f6dab483c82b6fcabc71f9215"
-                            alt="Amazon logo" class="streaming-logo" />
-                        <span class="streaming-name">amazon</span>
-                    </li>
-                    <li class="streaming-item">
-                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/95f8aed773842872736f702ce7f5aad79520c226411995bfd8afdd72b8265c13?placeholderIfAbsent=true&apiKey=41a7402f6dab483c82b6fcabc71f9215"
-                            alt="Netflix logo" class="streaming-logo" />
-                        <span class="streaming-name">netflix</span>
-                    </li>
-                    <li class="streaming-item">
-                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3ebf87e7c892f713e48bb2176460a7136463cbadcffefba096c8a7145f6b4444?placeholderIfAbsent=true&apiKey=41a7402f6dab483c82b6fcabc71f9215"
-                            alt="Apple TV logo" class="streaming-logo" />
-                        <span class="streaming-name">apple tv</span>
-                    </li>
-                    <li class="streaming-item">
-                        <span class="streaming-name">youtube</span>
-                    </li>
-                    <li class="streaming-item">
-                        <span class="streaming-name">google store</span>
+                        <span class="streaming-name">{{ media.platform.name }}</span>
                     </li>
                 </ul>
             </section>
@@ -46,71 +26,29 @@
 
         <main class="main-content">
             <section class="movie-description">
-                <p>
-                    Pragas nas colheitas fizeram a civilização humana regredir para uma sociedade agrária em futuro de
-                    data desconhecida. Cooper, ex-piloto da NASA, tem uma fazenda com sua família. Murphy, a filha de
-                    dez anos de Cooper, acredita que seu quarto está assombrado por um fantasma que tenta se comunicar
-                    com ela. Pai e filha descobrem que o "fantasma" é uma inteligência desconhecida que está enviando
-                    mensagens codificadas através de radiação gravitacional, deixando coordenadas em binário que os
-                    levam até uma instalação secreta da NASA liderada pelo professor John Brand.
-                </p>
-                <p>
-                    O cientista revela que um buraco de minhoca foi aberto perto de Saturno e que ele leva a planetas
-                    que podem oferecer condições de sobrevivência para a espécie humana. As "missões Lázaro" enviadas
-                    anos antes identificaram três planetas potencialmente habitáveis orbitando o buraco negro Gargântua:
-                    Miller, Edmunds e Mann – nomeados em homenagem aos astronautas que os pesquisaram. Brand recruta
-                    Cooper para pilotar a nave espacial Endurance e recuperar os dados dos astronautas; se um dos
-                    planetas se mostrar habitável, a humanidade irá seguir para ele na instalação da NASA, que é na
-                    realidade uma enorme estação espacial.
-                </p>
+                <p>{{ media.description }}</p>
             </section>
-
-            <section class="rating-section">
-                <h2 class="visually-hidden">Movie Rating</h2>
-                <div class="rating-icons">
-                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5adf549aff0ade8bb7ab19890f27fba4f07946614d5d18d11d5c1e9e850d240f?placeholderIfAbsent=true&apiKey=41a7402f6dab483c82b6fcabc71f9215"
-                        alt="Rating icon 1" class="rating-icon" />
-                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b8422231-99ff-4096-83ac-6f28aa85d4b6?placeholderIfAbsent=true&apiKey=41a7402f6dab483c82b6fcabc71f9215"
-                        alt="Rating icon 2" class="rating-icon" />
-                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3e6fe9a0-eb76-436e-a620-a6a2ee2826db?placeholderIfAbsent=true&apiKey=41a7402f6dab483c82b6fcabc71f9215"
-                        alt="Rating icon 3" class="rating-icon" />
+            <section class="user-interaction">
+                <div class="rating-section">
+                    <img src="assets/star1.png" alt="Estrela 1" class="rating-star">
+                    <img src="assets/star2.png" alt="Estrela 2" class="rating-star">
+                    <img src="assets/star3.png" alt="Estrela 3" class="rating-star">
                 </div>
-                <p class="rating-label">avaliar</p>
-                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5cbf0a76665a32dd0337722c9bd4cea56f3b5480a8abb3c13c0570039dbe912e?placeholderIfAbsent=true&apiKey=41a7402f6dab483c82b6fcabc71f9215"
-                    alt="Rating stars" class="rating-stars" />
+                <p class="rate-prompt">avaliar</p>
+                <img src="assets/rating-scale.png" alt="Escala de avaliação" class="rating-scale">
                 <form class="comment-form">
-                    <label for="comment" class="visually-hidden">Add a comment</label>
-                    <textarea id="comment" class="comment-input" placeholder="comentário"></textarea>
+                    <label for="user-comment" class="visually-hidden">Comentário</label>
+                    <textarea id="user-comment" class="comment-input" placeholder="comentário"></textarea>
                     <button type="submit" class="submit-button">Criar</button>
                 </form>
             </section>
 
-            <section class="team-section">
-                <h2 class="team-title">equipe</h2>
-                <ul class="team-list">
-                    <li class="team-member">
-                        <span class="member-name">Christopher Nolan</span>
-                        <span class="member-role">diretor</span>
-                    </li>
-                    <li class="team-member">
-                        <span class="member-name">Nathan Crowley</span>
-                        <span class="member-role">diretor de arte</span>
-                    </li>
-                    <li class="team-member">
-                        <span class="member-name">Matthew McConaughey</span>
-                        <span class="member-role">ator</span>
-                    </li>
-                    <li class="team-member">
-                        <span class="member-name">Jessica Chastain</span>
-                        <span class="member-role">atriz</span>
-                    </li>
-                    <li class="team-member">
-                        <span class="member-name">Anne Hathaway</span>
-                        <span class="member-role">atriz</span>
-                    </li>
-                    <li class="team-member">
-                        <span class="member-name">Matt Damon</span>
-                        <span class="member-role">ator</span>
+            <section class="movie-crew">
+                <h2 class="section-title">equipe</h2>
+                <ul class="crew-list">
+                    <li class="crew-item">
+                        <span class="crew-name">{{ media.team.name }}</span>
+                        <span class="crew-role">{{ media.team.role }}</span>
                     </li>
                 </ul>
             </section>

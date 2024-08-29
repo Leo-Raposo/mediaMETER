@@ -1,6 +1,19 @@
+.media-item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.media-name {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
 .media-section {
     width: 100%;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .media-title {
@@ -24,16 +37,16 @@
     width: 671px;
     max-width: 100%;
     align-items: start;
-    gap: 29px;
+    gap: 20px;
     color: #fff;
     flex-wrap: wrap;
-    margin: 11px 0 0 15px;
+    margin: 10px 0 0 15px;
     font: 300 14px Inter, sans-serif;
 }
 
 .media-item {
     aspect-ratio: 0.6;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
     width: 111px;
     border-radius: 4px;

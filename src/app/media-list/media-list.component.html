@@ -3,9 +3,13 @@
     <hr class="divider">
     <div class="media-list">
         <ng-container *ngFor="let media of paginatedItems">
-            <img [src]="media.src" [alt]="media.alt" class="media-item">
+            <a [routerLink]="['/avaliacao', media.id]">
+                <img [src]="media.src" [alt]="media.alt" class="media-item">
+                <p class="media-name">{{ media.alt }}</p>
+            </a>
         </ng-container>
     </div>
+
     <div class="pagination">
         <button (click)="previousPage()" [disabled]="currentPage === 1">
             <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/517e293790d8f562b4fc28214afb006f4094a035475e6d8193c7c7585ad4f82e?placeholderIfAbsent=true&apiKey=41a7402f6dab483c82b6fcabc71f9215"

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MediaService } from '../../services/media.service';
 import { MediaListComponent } from '../../media-list/media-list.component';
+import { MediaModel } from '../../models/media.model';
+import { MediaResponse } from '../../models/media-response.model';
 
 @Component({
   selector: 'app-home',
@@ -10,44 +13,39 @@ import { MediaListComponent } from '../../media-list/media-list.component';
 })
 export class HomeComponent implements OnInit {
 
-  movies = [
-    { src: 'https://cdn.builder.io/api/v1/image/assets/TEMP/1feb94166e5f10449d65024b4e1bada213d13b2788df5fbcf7f80961e7f6261d?placeholderIfAbsent=true&apiKey=41a7402f6dab483c82b6fcabc71f9215', alt: 'Movie 1' },
-    { src: 'https://cdn.builder.io/api/v1/image/assets/TEMP/49898899b73195196d038202a170f85bb37de1af7b02375d4427ae377fa92d47?placeholderIfAbsent=true&apiKey=41a7402f6dab483c82b6fcabc71f9215', alt: 'Movie 2' },
-    { src: 'https://cdn.builder.io/api/v1/image/assets/TEMP/1ed081ec2e30dae2a9f92eb6e639fda3dd530011070e7f68716c23cb15369345?placeholderIfAbsent=true&apiKey=41a7402f6dab483c82b6fcabc71f9215', alt: 'Movie 3' },
-    { src: 'https://cdn.builder.io/api/v1/image/assets/TEMP/fefe403b8aafd068f3947d6b1f2d1134080b9054029fdef2b7f51b3a65c05a49?placeholderIfAbsent=true&apiKey=41a7402f6dab483c82b6fcabc71f9215', alt: 'Movie 4' },
-    { src: 'https://cdn.builder.io/api/v1/image/assets/TEMP/1feb94166e5f10449d65024b4e1bada213d13b2788df5fbcf7f80961e7f6261d?placeholderIfAbsent=true&apiKey=41a7402f6dab483c82b6fcabc71f9215', alt: 'Movie 5' },
-    { src: 'https://cdn.builder.io/api/v1/image/assets/TEMP/49898899b73195196d038202a170f85bb37de1af7b02375d4427ae377fa92d47?placeholderIfAbsent=true&apiKey=41a7402f6dab483c82b6fcabc71f9215', alt: 'Movie 6' },
-    { src: 'https://cdn.builder.io/api/v1/image/assets/TEMP/1ed081ec2e30dae2a9f92eb6e639fda3dd530011070e7f68716c23cb15369345?placeholderIfAbsent=true&apiKey=41a7402f6dab483c82b6fcabc71f9215', alt: 'Movie 7' },
-    { src: 'https://cdn.builder.io/api/v1/image/assets/TEMP/fefe403b8aafd068f3947d6b1f2d1134080b9054029fdef2b7f51b3a65c05a49?placeholderIfAbsent=true&apiKey=41a7402f6dab483c82b6fcabc71f9215', alt: 'Movie 8' },
-  ];
+  movies: MediaModel[] = [];
+  games: MediaModel[] = [];
+  albums: MediaModel[] = [];
 
-  games = [
-    { src: 'https://cdn.builder.io/api/v1/image/assets/TEMP/1feb94166e5f10449d65024b4e1bada213d13b2788df5fbcf7f80961e7f6261d?placeholderIfAbsent=true&apiKey=41a7402f6dab483c82b6fcabc71f9215', alt: 'Game 1' },
-    { src: 'https://cdn.builder.io/api/v1/image/assets/TEMP/49898899b73195196d038202a170f85bb37de1af7b02375d4427ae377fa92d47?placeholderIfAbsent=true&apiKey=41a7402f6dab483c82b6fcabc71f9215', alt: 'Game 2' },
-    { src: 'https://cdn.builder.io/api/v1/image/assets/TEMP/1ed081ec2e30dae2a9f92eb6e639fda3dd530011070e7f68716c23cb15369345?placeholderIfAbsent=true&apiKey=41a7402f6dab483c82b6fcabc71f9215', alt: 'Game 3' },
-    { src: 'https://cdn.builder.io/api/v1/image/assets/TEMP/fefe403b8aafd068f3947d6b1f2d1134080b9054029fdef2b7f51b3a65c05a49?placeholderIfAbsent=true&apiKey=41a7402f6dab483c82b6fcabc71f9215', alt: 'Game 4' },
-    { src: 'https://cdn.builder.io/api/v1/image/assets/TEMP/1feb94166e5f10449d65024b4e1bada213d13b2788df5fbcf7f80961e7f6261d?placeholderIfAbsent=true&apiKey=41a7402f6dab483c82b6fcabc71f9215', alt: 'Game 5' },
-    { src: 'https://cdn.builder.io/api/v1/image/assets/TEMP/49898899b73195196d038202a170f85bb37de1af7b02375d4427ae377fa92d47?placeholderIfAbsent=true&apiKey=41a7402f6dab483c82b6fcabc71f9215', alt: 'Game 6' },
-    { src: 'https://cdn.builder.io/api/v1/image/assets/TEMP/1ed081ec2e30dae2a9f92eb6e639fda3dd530011070e7f68716c23cb15369345?placeholderIfAbsent=true&apiKey=41a7402f6dab483c82b6fcabc71f9215', alt: 'Game 7' },
-    { src: 'https://cdn.builder.io/api/v1/image/assets/TEMP/fefe403b8aafd068f3947d6b1f2d1134080b9054029fdef2b7f51b3a65c05a49?placeholderIfAbsent=true&apiKey=41a7402f6dab483c82b6fcabc71f9215', alt: 'Game 8' },
-    // ... mais jogos
-  ];
+  constructor(private mediaService: MediaService) { }
 
-  albums = [
-    { src: 'https://cdn.builder.io/api/v1/image/assets/TEMP/1feb94166e5f10449d65024b4e1bada213d13b2788df5fbcf7f80961e7f6261d?placeholderIfAbsent=true&apiKey=41a7402f6dab483c82b6fcabc71f9215', alt: 'Album 1' },
-    { src: 'https://cdn.builder.io/api/v1/image/assets/TEMP/49898899b73195196d038202a170f85bb37de1af7b02375d4427ae377fa92d47?placeholderIfAbsent=true&apiKey=41a7402f6dab483c82b6fcabc71f9215', alt: 'Album 2' },
-    { src: 'https://cdn.builder.io/api/v1/image/assets/TEMP/1ed081ec2e30dae2a9f92eb6e639fda3dd530011070e7f68716c23cb15369345?placeholderIfAbsent=true&apiKey=41a7402f6dab483c82b6fcabc71f9215', alt: 'Album 3' },
-    { src: 'https://cdn.builder.io/api/v1/image/assets/TEMP/fefe403b8aafd068f3947d6b1f2d1134080b9054029fdef2b7f51b3a65c05a49?placeholderIfAbsent=true&apiKey=41a7402f6dab483c82b6fcabc71f9215', alt: 'Album 4' },
-    { src: 'https://cdn.builder.io/api/v1/image/assets/TEMP/1feb94166e5f10449d65024b4e1bada213d13b2788df5fbcf7f80961e7f6261d?placeholderIfAbsent=true&apiKey=41a7402f6dab483c82b6fcabc71f9215', alt: 'Album 5' },
-    { src: 'https://cdn.builder.io/api/v1/image/assets/TEMP/49898899b73195196d038202a170f85bb37de1af7b02375d4427ae377fa92d47?placeholderIfAbsent=true&apiKey=41a7402f6dab483c82b6fcabc71f9215', alt: 'Album 6' },
-    { src: 'https://cdn.builder.io/api/v1/image/assets/TEMP/1ed081ec2e30dae2a9f92eb6e639fda3dd530011070e7f68716c23cb15369345?placeholderIfAbsent=true&apiKey=41a7402f6dab483c82b6fcabc71f9215', alt: 'Album 7' },
-    { src: 'https://cdn.builder.io/api/v1/image/assets/TEMP/fefe403b8aafd068f3947d6b1f2d1134080b9054029fdef2b7f51b3a65c05a49?placeholderIfAbsent=true&apiKey=41a7402f6dab483c82b6fcabc71f9215', alt: 'Album 8' },
-    // ... mais álbuns
-  ];
+  ngOnInit(): void {
+    console.log('Initial Movies:', this.movies);
+    console.log('Initial Games:', this.games);
+    console.log('Initial Albums:', this.albums);
+    this.fetchMovies();
+    this.fetchGames();
+    this.fetchAlbums();
+    console.log('After Fetch Movies:', this.movies);
+    console.log('After Fetch Games:', this.games);
+    console.log('After Fetch Albums:', this.albums);
+  }
 
-  constructor() { }
+  fetchMovies(): void {
+    this.mediaService.getMedias({ size: 30 }).subscribe((response: MediaResponse) => {
+      this.movies = response.content.filter(media => media.mediaType.name === 'Movie');
+    });
+  }
 
-  ngOnInit(): void { }
+  fetchGames(): void {
+    this.mediaService.getMedias({ size: 30 }).subscribe((response: MediaResponse) => {
+      this.games = response.content.filter(media => media.mediaType.name === 'Game');
+    });
+  }
 
-
+  fetchAlbums(): void {
+    this.mediaService.getMedias({ size: 30 }).subscribe((response: MediaResponse) => {
+      this.albums = response.content.filter(media => media.mediaType.name === 'Album');
+    });
+  }
 }

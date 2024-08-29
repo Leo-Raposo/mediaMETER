@@ -1,5 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { Component, OnInit } from '@angular/core';
+import { MediaService } from './services/media.service';
 
 describe('AppComponent', () => {
   beforeEach(async () => {

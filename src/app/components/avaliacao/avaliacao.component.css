@@ -11,39 +11,39 @@
 }
 
 .movie-header {
-    position: relative;
-    display: flex;
-    flex-direction: column;
     align-items: center;
     color: #fdfdfc;
+    display: flex;
+    flex-direction: column;
     font: 400 16px Inter, sans-serif;
     min-height: 409px;
     padding: 357px 70px 25px;
+    position: relative;
     width: 100%;
 }
 
 .movie-poster {
-    position: absolute;
-    inset: 0;
     height: 100%;
-    width: 100%;
+    inset: 0;
     object-fit: cover;
     object-position: center;
+    position: absolute;
+    width: 100%;
 }
 
 .movie-info {
-    position: relative;
     display: flex;
-    width: 441px;
-    max-width: 100%;
     gap: 9px;
+    max-width: 100%;
+    position: relative;
+    width: 441px;
 }
 
 .movie-title {
     color: #fdfdfc;
+    flex-grow: 1;
     font-size: 22px;
     font-weight: 600;
-    flex-grow: 1;
 }
 
 .movie-year,
@@ -58,45 +58,43 @@
 
 .content-wrapper {
     align-self: center;
-    z-index: 10;
     margin-top: -61px;
-    width: 100%;
     max-width: 1165px;
-    display: flex;
-    gap: 20px;
+    width: 100%;
+    z-index: 10;
 }
 
 .sidebar {
-    width: 19%;
+    color: #a3a3a3;
     display: flex;
     flex-direction: column;
-    color: #a3a3a3;
     font: 400 16px Inter, sans-serif;
+    width: 19%;
 }
 
 .movie-thumbnail {
     aspect-ratio: 0.6;
+    border-radius: 7px;
     object-fit: contain;
     object-position: center;
     width: 208px;
-    border-radius: 7px;
 }
 
-.streaming-section {
+.watch-options {
+    aspect-ratio: 0.889;
+    border-radius: 0;
     display: flex;
     flex-direction: column;
-    border-radius: 0;
-    position: relative;
-    aspect-ratio: 0.889;
     margin-top: 56px;
-    width: 100%;
-    align-items: start;
     padding: 10px 42px 21px 9px;
+    position: relative;
+    width: 100%;
 }
 
-.streaming-title {
+.section-title {
     color: #fdfdfc;
     font-weight: 500;
+    position: relative;
 }
 
 .streaming-list {
@@ -105,10 +103,10 @@
 }
 
 .streaming-item {
+    align-items: center;
     display: flex;
     gap: 7px;
     margin: 7px 0 0 10px;
-    align-items: center;
 }
 
 .streaming-logo {
@@ -118,135 +116,136 @@
     width: 30px;
 }
 
+.streaming-name {
+    margin: auto 0;
+}
+
 .main-content {
-    width: 81%;
     display: flex;
-    margin-top: 53px;
     flex-direction: column;
+    margin-top: 53px;
+    width: 81%;
 }
 
-.movie-description {
+.movie-synopsis {
     color: #a3a3a3;
-    text-align: justify;
     font: 400 16px Inter, sans-serif;
+    text-align: justify;
+    width: 66%;
 }
 
-.rating-section {
-    border-radius: 8.824px;
-    border: 0.735px solid #282828;
+.user-interaction {
     background-color: #161616;
+    border: 0.735px solid #282828;
+    border-radius: 8.824px;
     display: flex;
-    width: 100%;
     flex-direction: column;
     margin: 0 auto;
     padding: 20px 8px 12px;
+    width: 34%;
 }
 
-.rating-icons {
-    display: flex;
+.rating-section {
     align-items: start;
+    display: flex;
     gap: 20px;
     justify-content: space-between;
 }
 
-.rating-icon {
+.rating-star {
     aspect-ratio: 1.02;
+    margin-top: 5px;
     object-fit: contain;
     object-position: center;
     width: 54px;
-    margin-top: 5px;
 }
 
-.rating-label {
-    color: #fdfdfc;
+.rate-prompt {
     align-self: center;
-    margin-top: 12px;
+    color: #fdfdfc;
     font: 300 16px Inter, sans-serif;
+    margin-top: 12px;
 }
 
-.rating-stars {
+.rating-scale {
+    align-self: center;
     aspect-ratio: 6.21;
+    margin-top: 10px;
+    max-width: 100%;
     object-fit: contain;
     object-position: center;
     width: 186px;
-    align-self: center;
-    margin-top: 10px;
-    max-width: 100%;
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 21px;
 }
 
 .comment-input {
-    border-radius: 4.286px;
-    border: 0.857px solid #282828;
     background-color: #1c1c1c;
-    margin-top: 21px;
-    width: 246px;
-    max-width: 100%;
+    border: 0.857px solid #282828;
+    border-radius: 4.286px;
     color: #a6a6a6;
-    padding: 8px 10px 47px;
     font: 400 14px Inter, sans-serif;
+    padding: 8px 10px;
+    width: 100%;
 }
 
 .submit-button {
-    border-radius: 5px;
-    border: 1px solid #282828;
+    align-self: flex-end;
     background-color: #1c1c1c;
-    align-self: end;
-    margin-top: 36px;
+    border: 1px solid #282828;
+    border-radius: 5px;
     color: #fdfdfc;
-    text-align: center;
-    padding: 11px 16px;
     font: 500 16px Inter, sans-serif;
+    margin-top: 36px;
+    padding: 11px 16px;
+    text-align: center;
 }
 
-.team-section {
-    border-radius: 7.647px;
-    border: 0.637px solid #282828;
+.movie-crew {
     background-color: #161616;
-    display: flex;
-    margin-top: 30px;
-    width: 533px;
-    max-width: 100%;
-    flex-direction: column;
+    border: 0.637px solid #282828;
+    border-radius: 7.647px;
     color: #a6a6a6;
-    padding: 7px 15px 19px;
+    display: flex;
+    flex-direction: column;
     font: 400 12px Inter, sans-serif;
+    margin-top: 30px;
+    max-width: 100%;
+    padding: 7px 15px 19px;
+    width: 533px;
 }
 
-.team-title {
-    color: #fdfdfc;
-    font-size: 16px;
-    font-weight: 500;
-    align-self: start;
-}
-
-.team-list {
-    list-style-type: none;
-    padding: 0;
+.crew-list {
     display: flex;
     flex-wrap: wrap;
     gap: 6px 17px;
-    margin-top: 12px;
+    list-style-type: none;
+    padding: 0;
 }
 
-.team-member {
-    border-radius: 4.286px;
+.crew-item {
     background-color: #1c1c1c;
+    border-radius: 4.286px;
     display: flex;
-    justify-content: space-between;
     flex: 1;
+    gap: 40px;
+    justify-content: space-between;
     padding: 10px 7px;
 }
 
 .visually-hidden {
-    position: absolute;
-    width: 1px;
+    border: 0;
+    clip: rect(0 0 0 0);
     height: 1px;
     margin: -1px;
-    padding: 0;
     overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
+    padding: 0;
+    position: absolute;
+    width: 1px;
 }
 
 @media (max-width: 991px) {
@@ -260,9 +259,7 @@
     }
 
     .content-wrapper {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0;
+        max-width: 100%;
     }
 
     .sidebar,
@@ -270,38 +267,41 @@
         width: 100%;
     }
 
-    .sidebar {
-        margin-top: 40px;
-    }
-
-    .streaming-section {
+    .watch-options {
         margin-top: 40px;
         padding-right: 20px;
+    }
+
+    .streaming-item {
+        white-space: normal;
     }
 
     .main-content {
         margin-top: 40px;
     }
 
-    .movie-description {
-        max-width: 100%;
+    .movie-synopsis,
+    .user-interaction {
         margin-top: 40px;
+        max-width: 100%;
     }
 
     .rating-section {
-        margin-top: 40px;
+        margin-right: 4px;
     }
 
     .comment-input {
         margin-left: 4px;
         padding-right: 20px;
+        white-space: normal;
     }
 
     .submit-button {
         margin-right: 4px;
+        white-space: normal;
     }
 
-    .team-section {
+    .movie-crew {
         max-width: 100%;
     }
 }
