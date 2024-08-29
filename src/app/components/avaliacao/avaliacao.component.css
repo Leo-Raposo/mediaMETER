@@ -121,10 +121,12 @@
 }
 
 .main-content {
+    color: #a3a3a3;
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin-top: 53px;
-    width: 81%;
+    width: 100%;
 }
 
 .movie-synopsis {
@@ -174,7 +176,6 @@
     max-width: 100%;
     object-fit: contain;
     object-position: center;
-    width: 186px;
 }
 
 .comment-form {

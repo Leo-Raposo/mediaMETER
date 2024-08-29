@@ -5,7 +5,7 @@
             <h1 class="movie-title">{{ media.name }}</h1>
             <p class="movie-year">{{ media.releasedDate | date: 'yyyy' }}</p>
             <p class="movie-director">
-                <span class="label">dirigido por</span>
+                <span class="label">dirigido por&nbsp;</span>
                 <span class="director-name">{{ media.team.name }}</span>
             </p>
         </div>
@@ -26,16 +26,20 @@
 
         <main class="main-content">
             <section class="movie-description">
-                <p>{{ media.description }}</p>
+                <p>
+                    {{ media.description }}
+                    <br>
+                    <br>
+                </p>
             </section>
             <section class="user-interaction">
                 <div class="rating-section">
-                    <img src="assets/star1.png" alt="Estrela 1" class="rating-star">
-                    <img src="assets/star2.png" alt="Estrela 2" class="rating-star">
-                    <img src="assets/star3.png" alt="Estrela 3" class="rating-star">
+                    <img src="./assets/images/star.svg" alt="Estrela 1" class="rating-star">
+                    <img src="./assets/images/star.svg" alt="Estrela 2" class="rating-star">
+                    <img src="./assets/images/star.svg" alt="Estrela 3" class="rating-star">
                 </div>
                 <p class="rate-prompt">avaliar</p>
-                <img src="assets/rating-scale.png" alt="Escala de avaliação" class="rating-scale">
+                <img src="./assets/images/rating-scale.png" alt="Escala de avaliação" class="rating-scale">
                 <form class="comment-form">
                     <label for="user-comment" class="visually-hidden">Comentário</label>
                     <textarea id="user-comment" class="comment-input" placeholder="comentário"></textarea>

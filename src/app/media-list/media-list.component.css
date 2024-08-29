@@ -6,6 +6,7 @@
 }
 
 .media-name {
+    max-width: 100px;
     margin-top: 10px;
     font-size: 14px;
     color: #ffffff;
@@ -23,8 +24,7 @@
 }
 
 .divider {
-    width: 708px;
-    max-width: 100%;
+    width: auto;
     height: 0;
     border: 1px solid #646464;
     margin: 10px 0;
@@ -34,9 +34,7 @@
 
 .media-list {
     display: flex;
-    width: 671px;
-    max-width: 100%;
-    align-items: start;
+    justify-content: space-around;
     gap: 20px;
     color: #fff;
     flex-wrap: wrap;
