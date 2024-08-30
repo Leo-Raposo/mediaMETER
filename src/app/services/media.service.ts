@@ -29,7 +29,7 @@ export class MediaService {
     return this.http.get<MediaModel>(`${this.apiUrl}/${id}`);
   }
 
-  createMedia(media: MediaModel): Observable<MediaModel> {
+  createMedia(media: FormData): Observable<MediaModel> {
     return this.http.post<MediaModel>(this.apiUrl, media);
   }
 
@@ -39,6 +39,26 @@ export class MediaService {
 
   deleteMedia(id: number): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/${id}`);
+  }
+
+  getMediaTypes(): Observable<any[]> {
+    return this.http.get<any[]>('/api/mediastypes');
+  }
+
+  getIdioms(): Observable<any[]> {
+    return this.http.get<any[]>('/api/idioms');
+  }
+
+  getPlatforms(): Observable<any[]> {
+    return this.http.get<any[]>('/api/platforms');
+  }
+
+  getGenres(): Observable<any[]> {
+    return this.http.get<any[]>('/api/genres');
+  }
+
+  getTeams(): Observable<any[]> {
+    return this.http.get<any[]>('/api/teams');
   }
 
   private handleError(error: HttpErrorResponse) {
